@@ -1,0 +1,80 @@
+<!DOCTYPE html><html lang="en"><head><meta charSet="utf-8"/><meta http-equiv="X-UA-Compatible" content="IE=edge"/><title>Entities · Agiledrop Docs</title><meta name="viewport" content="width=device-width"/><meta name="generator" content="Docusaurus"/><meta name="description" content="## Entities"/><meta name="docsearch:language" content="en"/><meta property="og:title" content="Entities · Agiledrop Docs"/><meta property="og:type" content="website"/><meta property="og:url" content="https://xetro.github.io/agiledrop-docsindex"/><meta property="og:description" content="## Entities"/><meta property="og:image" content="https://xetro.github.io/agiledrop-docs/img/undraw_online.svg"/><meta name="twitter:card" content="summary"/><meta name="twitter:image" content="https://xetro.github.io/agiledrop-docs/img/undraw_tweetstorm.svg"/><link rel="shortcut icon" href="/agiledrop-docsimg/favicon.ico"/><link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/styles/default.min.css"/><link rel="alternate" type="application/atom+xml" href="https://xetro.github.io/agiledrop-docs/blog/atom.xml" title="Agiledrop Docs Blog ATOM Feed"/><link rel="alternate" type="application/rss+xml" href="https://xetro.github.io/agiledrop-docs/blog/feed.xml" title="Agiledrop Docs Blog RSS Feed"/><script type="text/javascript" src="https://buttons.github.io/buttons.js"></script><script src="/agiledrop-docsjs/scrollSpy.js"></script><link rel="stylesheet" href="/agiledrop-docscss/main.css"/><script src="/agiledrop-docsjs/codetabs.js"></script></head><body class="sideNavVisible separateOnPageNav"><div class="fixedHeaderContainer"><div class="headerWrapper wrapper"><header><a href="/agiledrop-docs"><img class="logo" src="/agiledrop-docsimg/favicon.ico" alt="Agiledrop Docs"/><h2 class="headerTitleWithLogo">Agiledrop Docs</h2></a><div class="navigationWrapper navigationSlider"><nav class="slidingNav"><ul class="nav-site nav-site-internal"><li class="siteNavGroupActive"><a href="/agiledrop-docsdocs/db_stuff" target="_self">Docs</a></li><li class=""><a href="/agiledrop-docshelp" target="_self">Help</a></li><li class=""><a href="/agiledrop-docsblog/" target="_self">Blog</a></li></ul></nav></div></header></div></div><div class="navPusher"><div class="docMainWrapper wrapper"><div class="docsNavContainer" id="docsNav"><nav class="toc"><div class="toggleNav"><section class="navWrapper wrapper"><div class="navBreadcrumb wrapper"><div class="navToggle" id="navToggler"><div class="hamburger-menu"><div class="line1"></div><div class="line2"></div><div class="line3"></div></div></div><h2><i>›</i><span>Docs</span></h2><div class="tocToggler" id="tocToggler"><i class="icon-toc"></i></div></div><div class="navGroups"><div class="navGroup"><h3 class="navGroupCategoryTitle">Docs</h3><ul class=""><li class="navListItem"><a class="navItem" href="/agiledrop-docsdocs/db_stuff">DB Stuff</a></li><li class="navListItem"><a class="navItem" href="/agiledrop-docsdocs/debugging">Debugging</a></li><li class="navListItem"><a class="navItem" href="/agiledrop-docsdocs/dep_injection">Dependency Injection snippets</a></li><li class="navListItem"><a class="navItem" href="/agiledrop-docsdocs/drupal8_tips">Drupal 8 Tips</a></li><li class="navListItem navListItemActive"><a class="navItem" href="/agiledrop-docsdocs/entities">Entities</a></li><li class="navListItem"><a class="navItem" href="/agiledrop-docsdocs/images">Images</a></li><li class="navListItem"><a class="navItem" href="/agiledrop-docsdocs/libraries">Libraries</a></li><li class="navListItem"><a class="navItem" href="/agiledrop-docsdocs/misc">Miscellaneous</a></li><li class="navListItem"><a class="navItem" href="/agiledrop-docsdocs/modules">Modules</a></li><li class="navListItem"><a class="navItem" href="/agiledrop-docsdocs/rendering">Rendering</a></li><li class="navListItem"><a class="navItem" href="/agiledrop-docsdocs/search">Search</a></li><li class="navListItem"><a class="navItem" href="/agiledrop-docsdocs/urls">URLs and Links</a></li><li class="navListItem"><a class="navItem" href="/agiledrop-docsdocs/users">Users</a></li></ul></div></div></section></div><script>
+            var coll = document.getElementsByClassName('collapsible');
+            var checkActiveCategory = true;
+            for (var i = 0; i < coll.length; i++) {
+              var links = coll[i].nextElementSibling.getElementsByTagName('*');
+              if (checkActiveCategory){
+                for (var j = 0; j < links.length; j++) {
+                  if (links[j].classList.contains('navListItemActive')){
+                    coll[i].nextElementSibling.classList.toggle('hide');
+                    coll[i].childNodes[1].classList.toggle('rotate');
+                    checkActiveCategory = false;
+                    break;
+                  }
+                }
+              }
+
+              coll[i].addEventListener('click', function() {
+                var arrow = this.childNodes[1];
+                arrow.classList.toggle('rotate');
+                var content = this.nextElementSibling;
+                content.classList.toggle('hide');
+              });
+            }
+
+            document.addEventListener('DOMContentLoaded', function() {
+              createToggler('#navToggler', '#docsNav', 'docsSliderActive');
+              createToggler('#tocToggler', 'body', 'tocActive');
+
+              var headings = document.querySelector('.toc-headings');
+              headings && headings.addEventListener('click', function(event) {
+                var el = event.target;
+                while(el !== headings){
+                  if (el.tagName === 'A') {
+                    document.body.classList.remove('tocActive');
+                    break;
+                  } else{
+                    el = el.parentNode;
+                  }
+                }
+              }, false);
+
+              function createToggler(togglerSelector, targetSelector, className) {
+                var toggler = document.querySelector(togglerSelector);
+                var target = document.querySelector(targetSelector);
+
+                if (!toggler) {
+                  return;
+                }
+
+                toggler.onclick = function(event) {
+                  event.preventDefault();
+
+                  target.classList.toggle(className);
+                };
+              }
+            });
+        </script></nav></div><div class="container mainContainer docsContainer"><div class="wrapper"><div class="post"><header class="postHeader"><h1 id="__docusaurus" class="postHeaderTitle">Entities</h1></header><article><div><span><h2><a class="anchor" aria-hidden="true" id="entities"></a><a href="#entities" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Entities</h2>
+<h3><a class="anchor" aria-hidden="true" id="load-an-entity-can-be-a-config-entity-also"></a><a href="#load-an-entity-can-be-a-config-entity-also" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Load an entity. Can be a config entity also.</h3>
+<pre><code class="hljs"><span class="hljs-variable">$node</span> = \Drupal::entityTypeManager()-&gt;getStorage(<span class="hljs-string">'node'</span>)-&gt;load(<span class="hljs-number">23</span>);
+<span class="hljs-variable">$search_api_index</span> = \Drupal::entityTypeManager()-&gt;getStorage(<span class="hljs-string">'search_api'</span>)-&gt;load(<span class="hljs-string">'title_records'</span>);
+</code></pre>
+<h3><a class="anchor" aria-hidden="true" id="load-multiple-entities-if-no-param-is-passed-all-entities-are-loaded"></a><a href="#load-multiple-entities-if-no-param-is-passed-all-entities-are-loaded" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Load multiple entities (if no param is passed, all entities are loaded).</h3>
+<pre><code class="hljs">$<span class="hljs-keyword">node</span> <span class="hljs-title">= \Drupal</span>::entityTypeManager()-&gt;getStorage('<span class="hljs-keyword">node</span><span class="hljs-title">')-&gt;loadMultiple</span>($entity_ids);
+</code></pre>
+<h3><a class="anchor" aria-hidden="true" id="delete-multiple-entities"></a><a href="#delete-multiple-entities" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Delete multiple entities.</h3>
+<pre><code class="hljs"><span class="hljs-variable">$result</span> = \Drupal::entityQuery(<span class="hljs-string">'taxonomy_term'</span>)
+      -&gt;condition(<span class="hljs-string">'vid'</span>, <span class="hljs-string">'libraries'</span>)
+      -&gt;execute();
+entity_delete_multiple(<span class="hljs-string">'taxonomy_term'</span>, <span class="hljs-variable">$result</span>);
+</code></pre>
+<h3><a class="anchor" aria-hidden="true" id="adding-a-new-field-to-a-custom-entity"></a><a href="#adding-a-new-field-to-a-custom-entity" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Adding a new field to a custom entity.</h3>
+<pre><code class="hljs">$new_field = BaseFieldDefinition::create<span class="hljs-function"><span class="hljs-params">(<span class="hljs-string">'string'</span>)</span>
+  -&gt;</span>setLabel<span class="hljs-function"><span class="hljs-params">(<span class="hljs-keyword">new</span> TranslatableMarkup(<span class="hljs-string">'New Field'</span>))</span>
+  -&gt;</span>setDescription(<span class="hljs-keyword">new</span> TranslatableMarkup(<span class="hljs-string">'New field description.'</span>));
+<span class="hljs-string">\Drupal::entityDefinitionUpdateManager()-&gt;installFieldStorageDefinition('&lt;field_name&gt;',</span> <span class="hljs-string">'&lt;entity_type_id&gt;'</span>, <span class="hljs-string">'&lt;provider&gt;'</span>, $new_field);
+</code></pre>
+<h3><a class="anchor" aria-hidden="true" id="apply-all-updates-to-entities"></a><a href="#apply-all-updates-to-entities" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Apply all updates to entities.</h3>
+<pre><code class="hljs">\Drupal::entityDefinitionUpdateManager()-&gt;applyUpdates();
+</code></pre>
+</span></div></article></div><div class="docs-prevnext"><a class="docs-prev button" href="/agiledrop-docsdocs/drupal8_tips"><span class="arrow-prev">← </span><span>Drupal 8 Tips</span></a><a class="docs-next button" href="/agiledrop-docsdocs/images"><span>Images</span><span class="arrow-next"> →</span></a></div></div></div><nav class="onPageNav"><ul class="toc-headings"><li><a href="#entities">Entities</a><ul class="toc-headings"><li><a href="#load-an-entity-can-be-a-config-entity-also">Load an entity. Can be a config entity also.</a></li><li><a href="#load-multiple-entities-if-no-param-is-passed-all-entities-are-loaded">Load multiple entities (if no param is passed, all entities are loaded).</a></li><li><a href="#delete-multiple-entities">Delete multiple entities.</a></li><li><a href="#adding-a-new-field-to-a-custom-entity">Adding a new field to a custom entity.</a></li><li><a href="#apply-all-updates-to-entities">Apply all updates to entities.</a></li></ul></li></ul></nav></div><footer class="nav-footer" id="footer"><section class="sitemap"><a href="/agiledrop-docs" class="nav-home"><img src="/agiledrop-docsimg/favicon.ico" alt="Agiledrop Docs" width="66" height="58"/></a><div><h5>Docs</h5><a href="/agiledrop-docsdocs/en/doc1.html">Getting Started (or other categories)</a><a href="/agiledrop-docsdocs/en/doc2.html">Guides (or other categories)</a><a href="/agiledrop-docsdocs/en/doc3.html">API Reference (or other categories)</a></div><div><h5>Community</h5><a href="/agiledrop-docsen/users.html">User Showcase</a><a href="https://stackoverflow.com/questions/tagged/" target="_blank" rel="noreferrer noopener">Stack Overflow</a><a href="https://discordapp.com/">Project Chat</a><a href="https://twitter.com/" target="_blank" rel="noreferrer noopener">Twitter</a></div><div><h5>More</h5><a href="/agiledrop-docsblog">Blog</a><a href="https://github.com/">GitHub</a><a class="github-button" data-icon="octicon-star" data-count-href="/facebook/docusaurus/stargazers" data-show-count="true" data-count-aria-label="# stargazers on GitHub" aria-label="Star this project on GitHub">Star</a></div></section><a href="https://opensource.facebook.com/" target="_blank" rel="noreferrer noopener" class="fbOpenSource"><img src="/agiledrop-docsimg/oss_logo.png" alt="Facebook Open Source" width="170" height="45"/></a><section class="copyright">Copyright © 2020 Your Name or Your Company Name</section></footer></div></body></html>
